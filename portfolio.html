@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natan Ruiz — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="grain"></div>
+
+  <!-- ================================================================
+       HERO
+  ================================================================ -->
+  <canvas id="network-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.55;"></canvas>
+
+  <section id="hero" style="position:relative;z-index:1;">
+    <div class="container" style="position:relative;">
+
+      <p class="label reveal d1">Portfolio — <span id="current-year"></span></p>
+
+      <h1 class="hero-name reveal d2">
+        Natan<br><em>Ruiz</em>
+      </h1>
+
+      <p class="hero-title reveal d3">
+        Étudiant en CPGE MPI · Lycée Thiers<br>
+        Ancien skieur compétiteur<br>
+        En formation pour le Brevet d'État de ski alpin
+      </p>
+
+      <div class="hero-line reveal d4"></div>
+
+      <nav class="reveal d5" style="display:flex; gap:24px; flex-wrap:wrap;">
+        <a href="#about"    class="label" style="color:var(--text); transition:color 0.3s;" onmouseover="this.style.color='var(--bright)'" onmouseout="this.style.color='var(--text)'">À propos</a>
+        <a href="#projects" class="label" style="color:var(--text); transition:color 0.3s;" onmouseover="this.style.color='var(--bright)'" onmouseout="this.style.color='var(--text)'">Projets</a>
+        <a href="#contact"  class="label" style="color:var(--text); transition:color 0.3s;" onmouseover="this.style.color='var(--bright)'" onmouseout="this.style.color='var(--text)'">Contact</a>
+      </nav>
+
+      <div class="scroll-hint reveal d6">scroll</div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       À PROPOS
+  ================================================================ -->
+  <section id="about">
+    <div class="container">
+
+      <p class="section-tag scroll-reveal">À propos</p>
+
+      <div class="about-grid">
+
+        <p class="about-text scroll-reveal">
+          Passionné par les mathématiques, la physique et l'informatique,
+          je mène en parallèle une formation technique exigeante en classe préparatoire aux grandes écoles et un projet
+          autour de la montagne et du ski alpin.
+        </p>
+
+        <div class="about-block scroll-reveal">
+          <h3>Formation</h3>
+          <p>
+            CPGE MPI — Lycée Thiers, Marseille<br>
+            Mathématiques · Physique · Informatique
+          </p>
+        </div>
+
+        <div class="about-block scroll-reveal">
+          <h3>Ski alpin</h3>
+          <p>
+            Ancien skieur en compétition<br>
+            En cours de formation pour le BE ski alpin
+          </p>
+        </div>
+
+        <div class="about-block scroll-reveal">
+          <h3>Intérêts</h3>
+          <p>
+            Algorithmique · Montagne<br>
+            Sciences · Sport de haut niveau
+          </p>
+        </div>
+
+        <div class="about-block scroll-reveal">
+          <h3>Localisation</h3>
+          <p>
+            Marseille, France
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PROJETS
+  ================================================================ -->
+  <section id="projects">
+    <div class="container">
+
+      <p class="section-tag scroll-reveal">Projets</p>
+
+      <div class="projects-list">
+        <!-- P 1 -->
+        <a href="https://vo1le.github.io/volte" target="_blank" rel="noopener" class="project-item scroll-reveal">
+
+          <div>
+            <div class="project-meta">
+              <span class="project-year">2025</span>   
+              <span class="project-tag">Site Web</span> 
+            </div>
+            <h2 class="project-name">LogBook TIPE</h2>  
+            <p class="project-desc">LogBook des avancées du TIPE dans le cadre des concours aux grandes écoles d'ingénieur.</p> 
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <!-- P 2 -->
+        <a href="https://github.com/Vo1le/JV-lyc-e-altitude" target="_blank" rel="noopener" class="project-item scroll-reveal">
+          <div>
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h2 class="project-name">Jeu Vidéo du Lycée</h2>
+            <p class="project-desc">Contribution au projet de jeu du lycée, en collaboration avec l'association "Au coin du jeu". Aller sur le github afinde voir l'ensemble de la partition au projet.</p>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <!-- PROJET 3 -->
+        <a href="https://github.com/Vo1le/Projet-NSi-v2" target="_blank" rel="noopener" class="project-item scroll-reveal">
+          <div>
+            <div class="project-meta">
+              <span class="project-year">2025</span>
+              <span class="project-tag">Python / Html</span>
+            </div>
+            <h2 class="project-name">NSI - Fake Online Casino </h2>
+            <p class="project-desc">Projet de NSI au lycée. Faux casino en ligne.</p>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/vo1le" target="_blank" rel="noopener" class="project-item scroll-reveal">
+          <div>
+            <div class="project-meta">
+              <span class="project-year">2024 - <span id="current-year"></span></span>
+              <span class="project-tag">Java / Python / Html</span>
+            </div>
+            <h2 class="project-name">Divers Projets</h2>
+            <p class="project-desc">Liens vers github. PS: projets client non répertorié ici.</p>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CONTACT
+       ================================================================ -->
+  <section id="contact">
+    <div class="container">
+
+      <p class="section-tag scroll-reveal">Contact</p>
+
+      <h2 class="contact-heading scroll-reveal">
+        Travaillons<br><em>ensemble.</em>
+      </h2>
+
+      <div class="contact-links scroll-reveal">
+
+
+        <a href="mailto:ruiznatan05@gmail.com" class="contact-link">
+          <span>✉</span> Email
+        </a>
+        <a href="https://github.com/vo1le" target="_blank" rel="noopener" class="contact-link">
+          <span>⌥</span> GitHub
+        </a>
+        <a href="https://linkedin.com/in/natan-ruiz-b9051a35b/" target="_blank" rel="noopener" class="contact-link">
+          <span>◈</span> LinkedIn
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer>
+    <div class="container" style="width:100%; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; align-items:center;">
+      <span class="footer-copy">
+        Natan Ruiz <!-- ✏️  Ton nom -->
+        <span class="footer-dot"></span>
+        <span id="year-footer"></span>
+      </span>
+      <span class="footer-copy">A bientôt.</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
